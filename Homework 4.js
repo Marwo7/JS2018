@@ -1,4 +1,26 @@
-/*	Based on included JSON file. 
+/* 1)	Extend String type with the reverse() function. 
+The function is to reverse the value of the string up which it was called. */
+
+String.prototype.reverse = function() {
+  return this.split("")
+    .reverse()
+    .join("");
+};
+
+const reversedString = "javascript".reverse();
+console.log(reversedString);
+
+/* 2)	Extend Number type with the reverse() function. 
+The function is to reverse the value of the Number up which it was called. */
+
+Number.prototype.reverse = function() {
+  return this * -1;
+};
+
+const reversedNumber = 5;
+console.log(reversedNumber.reverse());
+
+/*	3) Based on included JSON file. 
     a.	Create a function that will return Json from the file. 
     b.	Create a structures to hold data from the file.
     c.	Map data from function a to structure from b.
